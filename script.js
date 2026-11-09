@@ -1,54 +1,65 @@
 document.addEventListener('DOMContentLoaded', function() {
     // -------------------------------------------------------------
-    // 1. Manejo del Formulario de Prospectos (Envío mediante Formspree)
+    // 1. Manejo del Formulario de Prospectos (Formspree AJAX)
     // -------------------------------------------------------------
     const leadForm = document.getElementById('leadForm');
 
     if (leadForm) {
         leadForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita la recarga y redirección predeterminada
+            e.preventDefault(); // Evita recargar la página
 
             const form = e.target;
-            const data = new FormData(form);
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
+            const nameInput = document.getElementById('name');
+            const phoneInput = document.getElementById('phone');
+            
+            const name = nameInput ? nameInput.value.trim() : '';
+            const phone = phoneInput ? phoneInput.value.trim() : '';
 
             if (name === '' || phone === '') {
                 alert('Please fill out all required fields.');
                 return;
             }
 
-            // Deshabilitar botón mientras envía
             const submitBtn = form.querySelector('.submit-btn');
-            if(submitBtn) submitBtn.disabled = true;
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Sending...';
+            }
 
-            // Envío asíncrono a Formspree
+            // Envío por AJAX a Formspree
             fetch(form.action, {
-                method: form.method,
-                body: data,
+                method: form.method || 'POST',
+                body: new FormData(form),
                 headers: {
                     'Accept': 'application/json'
                 }
-            }).then(response => {
-                if (response.ok) {
+            })
+            .then(response => {
+                if (response.ok || response.status === 200) {
+                    // Reemplazo visual de la tarjeta por el mensaje de éxito
                     const formCard = document.querySelector('.hero-form-card');
                     if (formCard) {
                         formCard.innerHTML = `
-                            <div style="text-align: center; padding: 20px;">
-                                <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 15px;"></i>
-                                <h3 style="color: #1e3a8a; margin-bottom: 10px;">Request Received!</h3>
-                                <p style="color: #4b5563; font-size: 0.95rem;">Thank you <strong>${name}</strong>. A local specialist will reach out to you at <strong>${phone}</strong> within 10 minutes to discuss your estimate.</p>
+                            <div style="text-align: center; padding: 25px 15px;">
+                                <i class="fa-solid fa-circle-check" style="font-size: 3.5rem; color: #10b981; margin-bottom: 15px;"></i>
+                                <h3 style="color: #1e3a8a; margin-bottom: 10px; font-size: 1.4rem;">Request Received!</h3>
+                                <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.5;">Thank you <strong>${name}</strong>. A local specialist will reach out to you at <strong>${phone}</strong> within 10 minutes to discuss your estimate.</p>
                             </div>
                         `;
                     }
                 } else {
-                    alert('There was a problem submitting your request. Please try again.');
-                    if(submitBtn) submitBtn.disabled = false;
+                    return response.json().then(data => {
+                        throw new Error(data.error || 'Form submission failed');
+                    });
                 }
-            }).catch(error => {
-                console.error('Error submitting form:', error);
-                alert('There was a problem submitting your request. Please check your connection and try again.');
-                if(submitBtn) submitBtn.disabled = false;
+            })
+            .catch(error => {
+                console.error('Formspree Error:', error);
+                alert('There was a problem sending your request. Please check that your Formspree Endpoint URL is correct.');
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = 'Get Quote Now';
+                }
             });
         });
     }
