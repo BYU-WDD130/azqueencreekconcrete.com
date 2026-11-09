@@ -96,29 +96,27 @@
             </div>
 
             <!-- Formulario de Leads -->
-            <div class="hero-form-card">
-                <h3>Request a Free Quote</h3>
-                <form id="leadForm">
-                    <div class="form-group">
-                        <label for="name">FULL NAME*</label>
-                        <input type="text" id="name" placeholder="Ex. John Smith" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">PHONE NUMBER*</label>
-                        <input type="tel" id="phone" placeholder="Ex. (623) 283-1140" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">REQUIRED SERVICE</label>
-                        <select id="service">
-                            <option value="Backyard Patio & Slabs">Backyard Patio & Slabs</option>
-                            <option value="Driveway Installation / Repair">Driveway Installation / Repair</option>
-                            <option value="RV Pad & Extension">RV Pad & Extension</option>
-                            <option value="Other Concrete Work">Other Concrete Work</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="submit-btn">Get Quote Now</button>
-                    <p class="form-footer-text"><i class="fa-solid fa-lock"></i> Your information is secure. We will contact you shortly.</p>
-                </form>
+<form id="leadForm" action="https://formspree.io/f/xaeerydk" method="POST">
+    <div class="form-group">
+        <label for="name">FULL NAME*</label>
+        <input type="text" id="name" name="name" placeholder="Ex. John Smith" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">PHONE NUMBER*</label>
+        <input type="tel" id="phone" name="phone" placeholder="Ex. (480) 000-0000" required>
+    </div>
+    <div class="form-group">
+        <label for="service">REQUIRED SERVICE</label>
+        <select id="service" name="service">
+            <option value="Backyard Patio & Slabs">Backyard Patio & Slabs</option>
+            <option value="Driveway Installation / Repair">Driveway Installation / Repair</option>
+            <option value="RV Pad & Extension">RV Pad & Extension</option>
+            <option value="Other Concrete Work">Other Concrete Work</option>
+        </select>
+    </div>
+    <button type="submit" class="submit-btn">Get Quote Now</button>
+    <p class="form-footer-text"><i class="fa-solid fa-lock"></i> Your information is secure. We will contact you shortly.</p>
+</form>
             </div>
         </div>
     </section>

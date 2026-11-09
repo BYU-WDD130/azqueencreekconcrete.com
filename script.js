@@ -1,34 +1,55 @@
 document.addEventListener('DOMContentLoaded', function() {
     // -------------------------------------------------------------
-    // 1. Manejo del Formulario de Prospectos (Lead Form)
+    // 1. Manejo del Formulario de Prospectos (Envío mediante Formspree)
     // -------------------------------------------------------------
     const leadForm = document.getElementById('leadForm');
 
     if (leadForm) {
         leadForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Evita la recarga y redirección predeterminada
 
+            const form = e.target;
+            const data = new FormData(form);
             const name = document.getElementById('name').value.trim();
             const phone = document.getElementById('phone').value.trim();
-            const service = document.getElementById('service').value;
 
             if (name === '' || phone === '') {
                 alert('Please fill out all required fields.');
                 return;
             }
 
-            console.log('Lead Captured:', { name, phone, service });
+            // Deshabilitar botón mientras envía
+            const submitBtn = form.querySelector('.submit-btn');
+            if(submitBtn) submitBtn.disabled = true;
 
-            const formCard = document.querySelector('.hero-form-card');
-            if (formCard) {
-                formCard.innerHTML = `
-                    <div style="text-align: center; padding: 20px;">
-                        <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 15px;"></i>
-                        <h3 style="color: #1e3a8a; margin-bottom: 10px;">Request Received!</h3>
-                        <p style="color: #4b5563; font-size: 0.95rem;">Thank you <strong>${name}</strong>. A local specialist will reach out to you at <strong>${phone}</strong> within 10 minutes to discuss your estimate.</p>
-                    </div>
-                `;
-            }
+            // Envío asíncrono a Formspree
+            fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    const formCard = document.querySelector('.hero-form-card');
+                    if (formCard) {
+                        formCard.innerHTML = `
+                            <div style="text-align: center; padding: 20px;">
+                                <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #10b981; margin-bottom: 15px;"></i>
+                                <h3 style="color: #1e3a8a; margin-bottom: 10px;">Request Received!</h3>
+                                <p style="color: #4b5563; font-size: 0.95rem;">Thank you <strong>${name}</strong>. A local specialist will reach out to you at <strong>${phone}</strong> within 10 minutes to discuss your estimate.</p>
+                            </div>
+                        `;
+                    }
+                } else {
+                    alert('There was a problem submitting your request. Please try again.');
+                    if(submitBtn) submitBtn.disabled = false;
+                }
+            }).catch(error => {
+                console.error('Error submitting form:', error);
+                alert('There was a problem submitting your request. Please check your connection and try again.');
+                if(submitBtn) submitBtn.disabled = false;
+            });
         });
     }
 
