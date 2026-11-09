@@ -1,0 +1,248 @@
+:root {
+    --primary-color: #0f172a;
+    --secondary-color: #2563eb;
+    --dark-color: #1e293b;
+    --light-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.site-header {
+    background: var(--card-bg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.btn-phone {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-phone:hover {
+    background-color: #1d4ed8;
+}
+
+/* Sección Hero con imagen de fondo y opacidad controlada */
+.hero {
+    background: linear-gradient(rgba(248, 250, 252, 0.88), rgba(248, 250, 252, 0.88)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    color: var(--dark-color);
+    padding: 60px 0;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.badge {
+    background-color: #dbeafe;
+    color: var(--secondary-color);
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #475569;
+}
+
+.hero-list {
+    list-style: none;
+}
+
+.hero-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #334155;
+}
+
+.hero-list i {
+    color: #16a34a;
+    margin-right: 10px;
+}
+
+/* Formulario de Leads con tarjeta blanca nítida */
+.hero-form-card {
+    background: var(--card-bg);
+    color: var(--dark-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.hero-form-card h3 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #1e293b;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+.form-footer-note {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 15px;
+    color: #64748b;
+}
+
+/* Servicios */
+.services {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.service-card p {
+    color: #64748b;
+}
+
+/* Footer limpio */
+.site-footer {
+    background: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
