@@ -4,85 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Concrete & Patio Services | Queen Creek AZ</title>
-    <meta name="description" content="Expert residential concrete contractors in Queen Creek, AZ specializing in custom patios, driveways, RV pads, and slabs. Fast, free estimates.">
+    <meta name="description" content="Top-rated concrete contractors in Queen Creek, AZ. Specializing in backyard patios, driveways, RV pads, and solid concrete foundations. Free estimates available.">
+    <meta name="keywords" content="Queen Creek concrete contractors, backyard patios, concrete driveways, RV pads, residential concrete services, free estimates, licensed and insured">
+    <meta name="author" content="Queen Creek Concrete Pros">
+    <meta name="robots" content="index, follow">
+    
+   <meta property="og:type" content="website">
+    <meta property="og:url" content="https://azqueencreekconcrete.com/">
+    <meta property="og:title" content="Professional Concrete & Patio Services | Queen Creek AZ">
+    <meta property="og:description" content="Top-rated concrete contractors in Queen Creek, AZ. Specializing in backyard patios, driveways, RV pads, and solid concrete foundations. Free estimates available.">
+    <meta property="og:image" content="https://azqueencreekconcrete.com/images/hero-concrete-bg.webp">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://azqueencreekconcrete.com/">
+    <meta name="twitter:title" content="Professional Concrete & Patio Services | Queen Creek AZ">
+    <meta name="twitter:description" content="Top-rated concrete contractors in Queen Creek, AZ. Specializing in backyard patios, driveways, RV pads, and solid concrete foundations. Free estimates available.">
+    <meta name="twitter:image" content="https://azqueencreekconcrete.com/images/hero-concrete-bg.webp">
+
+    <!-- Apple / iOS Web App Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="QC Concrete">
+    <link rel="apple-touch-icon" href="./images/icon-192.png">
+
+    <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema.org Structured Data (Local Business) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Queen Creek Concrete Pros",
+      "url": "https://azqueencreekconcrete.com/",
+      "image": "https://azqueencreekconcrete.com/images/hero-concrete-bg.webp",
+      "telephone": "+1-623-283-1140",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Queen Creek",
+        "addressRegion": "AZ",
+        "postalCode": "85142",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "Queen Creek, AZ",
+        "San Tan Valley, AZ"
+      ],
+      "description": "Top-rated concrete contractors in Queen Creek, AZ specializing in custom backyard patios, driveways, RV pads, and solid foundations.",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "07:00",
+        "closes": "19:00"
+      }
+    }
+    </script>
+
 </head>
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- Header / Navbar -->
     <header class="site-header">
-        <div class="container nav-container">
-            <div class="logo">
-                <h1>Queen Creek Concrete Pros</h1>
-            </div>
-            <div class="cta-header">
-                <a href="tel:4800000000" class="btn-phone"><i class="fa-solid fa-phone"></i> (480) 000-0000</a>
-            </div>
+        <div class="container header-flex">
+            <h1 class="logo">Queen Creek Concrete Pros</h1>
+            <a href="tel:6232831140" class="phone-btn"><i class="fa-solid fa-phone"></i> (623) 283-1140</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section con Fondo Acorde al Trabajo de Concreto -->
+    <section class="hero-section">
         <div class="container hero-grid">
-            <div class="hero-content">
-                <span class="badge">Verified Local Contractors</span>
+            <div class="hero-text">
+                <span class="badge"><i class="fa-solid fa-check"></i> VERIFIED LOCAL CONTRACTORS</span>
                 <h2>Expert Residential Concrete in Queen Creek, AZ</h2>
                 <p>Specialists in custom backyard patios, driveways, RV pads, and solid concrete foundations for your home.</p>
-                <ul class="hero-list">
-                    <li><i class="fa-solid fa-check"></i> 100% Free Estimates</li>
-                    <li><i class="fa-solid fa-check"></i> High-Durability Desert Materials</li>
-                    <li><i class="fa-solid fa-check"></i> Licensed & Insured</li>
+                <ul class="hero-features">
+                    <li><i class="fa-solid fa-circle-check"></i> 100% Free Estimates</li>
+                    <li><i class="fa-solid fa-circle-check"></i> High-Durability Desert Materials</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Licensed & Insured</li>
                 </ul>
             </div>
-            
-            <!-- Lead Capture Form -->
+
+            <!-- Formulario de Leads -->
             <div class="hero-form-card">
                 <h3>Request a Free Quote</h3>
                 <form id="leadForm">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Ex. John Smith">
+                        <label for="name">FULL NAME*</label>
+                        <input type="text" id="name" placeholder="Ex. John Smith" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="Ex. (480) 000-0000">
+                        <label for="phone">PHONE NUMBER*</label>
+                        <input type="tel" id="phone" placeholder="Ex. (623) 283-1140" required>
                     </div>
                     <div class="form-group">
-                        <label for="service">Required Service</label>
-                        <select id="service" name="service">
-                            <option value="patio">Backyard Patio & Slabs</option>
-                            <option value="driveway">Driveway Installation / Repair</option>
-                            <option value="rv_pad">RV Pad & Extension</option>
-                            <option value="other">Other Concrete Work</option>
+                        <label for="service">REQUIRED SERVICE</label>
+                        <select id="service">
+                            <option value="Backyard Patio & Slabs">Backyard Patio & Slabs</option>
+                            <option value="Driveway Installation / Repair">Driveway Installation / Repair</option>
+                            <option value="RV Pad & Extension">RV Pad & Extension</option>
+                            <option value="Other Concrete Work">Other Concrete Work</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn-submit">Get Quote Now</button>
-                    <p class="form-footer-note"><i class="fa-solid fa-lock"></i> Your information is secure. We will contact you shortly.</p>
+                    <button type="submit" class="submit-btn">Get Quote Now</button>
+                    <p class="form-footer-text"><i class="fa-solid fa-lock"></i> Your information is secure. We will contact you shortly.</p>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services container">
-        <h3>Our Core Services in Queen Creek</h3>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fa-solid fa-house-chimney"></i>
-                <h4>Custom Patios & Slabs</h4>
-                <p>Transform your backyard living area with clean, durable, and low-maintenance concrete surfaces built for outdoor enjoyment.</p>
+    <!-- Seccion de Servicios Visuales (Grid Dinámico y Lightbox) -->
+    <section class="services-visual-section" id="featured-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Services in Queen Creek</h2>
+                <p>Professional residential installations built to withstand heavy traffic and extreme desert heat.</p>
             </div>
-            <div class="service-card">
-                <i class="fa-solid fa-road"></i>
-                <h4>Driveways & Extensions</h4>
-                <p>Professional installation of concrete driveways engineered to handle heavy vehicles and intense heat.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-caravan"></i>
-                <h4>RV Pads & Parking</h4>
-                <p>Reinforced heavy-duty concrete slabs designed to securely park your motorhome, boat, or travel trailer.</p>
+
+            <div class="services-grid">
+                <!-- Tarjeta 1 -->
+                <div class="service-card">
+                    <div class="card-image-wrapper">
+                        <img src="images/patios.webp" alt="Custom concrete backyard patio installation" width="800" height="450" loading="lazy">
+                        <div class="zoom-overlay"><span>🔍 Click to expand</span></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Custom Patios & Slabs</h3>
+                        <p>Transform your backyard living area with clean, durable, and low-maintenance concrete surfaces built for outdoor enjoyment.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="service-card">
+                    <div class="card-image-wrapper">
+                        <img src="images/driveway.webp" alt="Professional concrete driveway installation" width="800" height="450" loading="lazy">
+                        <div class="zoom-overlay"><span>🔍 Click to expand</span></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Driveways & Extensions</h3>
+                        <p>Professional installation of concrete driveways engineered to handle heavy vehicles and intense heat.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="service-card">
+                    <div class="card-image-wrapper">
+                        <img src="images/rvpads.webp" alt="Reinforced heavy-duty concrete slab for RV parking" width="800" height="450" loading="lazy">
+                        <div class="zoom-overlay"><span>🔍 Click to expand</span></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>RV Pads & Parking</h3>
+                        <p>Reinforced heavy-duty concrete slabs designed to securely park your motorhome, boat, or travel trailer.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -93,6 +177,12 @@
             <p>&copy; 2026 Queen Creek Concrete Pros. All rights reserved. | Serving Queen Creek, San Tan Valley, and surrounding areas.</p>
         </div>
     </footer>
+
+    <!-- Ventana Modal / Lightbox Global -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgExpanded" alt="Expanded work view">
+    </div>
 
     <script src="script.js"></script>
 </body>
