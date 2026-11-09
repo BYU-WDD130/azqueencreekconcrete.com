@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => {
                 if (response.ok || response.status === 200) {
                     // Reemplazo visual de la tarjeta por el mensaje de éxito
-                    const formCard = document.querySelector('.hero-form-card');
+                    const formCard = document.querySelector('.form-card') || document.getElementById('quote-form-container') || document.querySelector('.hero-form-card');
                     if (formCard) {
                         formCard.innerHTML = `
-                            <div style="text-align: center; padding: 25px 15px;">
-                                <i class="fa-solid fa-circle-check" style="font-size: 3.5rem; color: #10b981; margin-bottom: 15px;"></i>
-                                <h3 style="color: #1e3a8a; margin-bottom: 10px; font-size: 1.4rem;">Request Received!</h3>
-                                <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.5;">Thank you <strong>${name}</strong>. A local specialist will reach out to you at <strong>${phone}</strong> within 10 minutes to discuss your estimate.</p>
+                            <div style="text-align: center; padding: 35px 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                            <i class="fa-solid fa-circle-check" style="font-size: 3.5rem; color: #10b981; margin-bottom: 15px;"></i>
+                            <h3 style="color: #1e3a8a; margin-bottom: 10px; font-size: 1.4rem;">Request Received!</h3>
+                            <p style="color: #4b5563; font-size: 0.95rem; line-height: 1.5;">Thank you <strong>${name}</strong>. A local specialist will reach out to you at <strong>${phone}</strong> within 10 minutes to discuss your estimate.</p>
                             </div>
                         `;
                     }
