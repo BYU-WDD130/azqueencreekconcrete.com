@@ -9,7 +9,7 @@
     <meta name="author" content="Queen Creek Concrete Pros">
     <meta name="robots" content="index, follow">
     
-   <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://azqueencreekconcrete.com/">
     <meta property="og:title" content="Professional Concrete & Patio Services | Queen Creek AZ">
     <meta property="og:description" content="Top-rated concrete contractors in Queen Creek, AZ. Specializing in backyard patios, driveways, RV pads, and solid concrete foundations. Free estimates available.">
@@ -28,20 +28,12 @@
     <meta name="apple-mobile-web-app-title" content="QC Concrete">
     <link rel="apple-touch-icon" href="./images/icon-192.png">
 
-<!-- Favicon principal -->
-<link rel="icon" href="images/favicon.ico" sizes="any">
-
-<!-- Favicon PNG -->
-<link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
-
-<!-- Apple Touch Icon (iOS) -->
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-
-<!-- Icono para Android / PWA -->
-<link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
-
-<!-- Logo de la empresa -->
-<link rel="preload" as="image" href="images/logo.webp">
+    <!-- Favicon & Icons -->
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
+    <link rel="preload" as="image" href="images/logo.webp">
 
     <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="style.css">
@@ -84,24 +76,23 @@
       }
     }
     </script>
-
 </head>
 <body>
 
     <!-- Header / Navbar -->
     <header class="site-header">
         <div class="container header-flex">
-            <h1 class="logo">Queen Creek Concrete Pros</h1>
+            <div class="logo">Queen Creek Concrete Pros</div>
             <a href="tel:6232831140" class="phone-btn"><i class="fa-solid fa-phone"></i> (623) 283-1140</a>
         </div>
     </header>
 
-    <!-- Hero Section con Fondo Acorde al Trabajo de Concreto -->
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container hero-grid">
             <div class="hero-text">
                 <span class="badge"><i class="fa-solid fa-check"></i> VERIFIED LOCAL CONTRACTORS</span>
-                <h2>Expert Residential Concrete in Queen Creek, AZ</h2>
+                <h1>Expert Residential Concrete in Queen Creek, AZ</h1>
                 <p>Specialists in custom backyard patios, driveways, RV pads, and solid concrete foundations for your home.</p>
                 <ul class="hero-features">
                     <li><i class="fa-solid fa-circle-check"></i> 100% Free Estimates</li>
@@ -111,40 +102,38 @@
             </div>
 
             <!-- Formulario de Leads -->
-<div class="form-card" id="quote-form-container">
-  <form id="leadForm" action="https://formspree.io/f/xaeerydk" method="POST">
-    <div class="form-group">
-        <label for="name">FULL NAME*</label>
-        <input type="text" id="name" name="name" placeholder="Ex. John Smith" required>
-    </div>
-    <div class="form-group">
-        <label for="phone">PHONE NUMBER*</label>
-        <input type="tel" id="phone" name="phone" placeholder="Ex. (480) 000-0000" required>
-    </div>
-    <div class="form-group">
-        <label for="service">REQUIRED SERVICE</label>
-        <select id="service" name="service">
-            <option value="Backyard Patio & Slabs">Backyard Patio & Slabs</option>
-            <option value="Driveway Installation / Repair">Driveway Installation / Repair</option>
-            <option value="RV Pad & Extension">RV Pad & Extension</option>
-            <option value="Other Concrete Work">Other Concrete Work</option>
-        </select>
-    </div>
-    <button type="submit" id="submit-btn" class="submit-btn">Get Quote Now</button>
-    <p class="form-footer-text"><i class="fa-solid fa-lock"></i> Your information is secure. We will contact you shortly.</p>
-  </form>
-</div>
-
+            <div class="form-card" id="quote-form-container">
+              <form id="leadForm" action="https://formspree.io/f/xaeerydk" method="POST">
+                <div class="form-group">
+                    <label for="name">FULL NAME*</label>
+                    <input type="text" id="name" name="name" placeholder="Ex. John Smith" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">PHONE NUMBER*</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ex. (480) 000-0000" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">REQUIRED SERVICE</label>
+                    <select id="service" name="service">
+                        <option value="Backyard Patio & Slabs">Backyard Patio & Slabs</option>
+                        <option value="Driveway Installation / Repair">Driveway Installation / Repair</option>
+                        <option value="RV Pad & Extension">RV Pad & Extension</option>
+                        <option value="Other Concrete Work">Other Concrete Work</option>
+                    </select>
+                </div>
+                <button type="submit" id="submit-btn" class="submit-btn">Get Quote Now</button>
+                <p class="form-footer-text"><i class="fa-solid fa-lock"></i> Your information is secure. We will contact you shortly.</p>
+              </form>
             </div>
         </div>
     </section>
 
-    <!-- Seccion de Servicios Visuales (Grid Dinámico y Lightbox) -->
+    <!-- Seccion de Servicios Visuales -->
     <section class="services-visual-section" id="featured-services">
         <div class="container">
             <div class="section-header">
                 <h2>Our Core Services in Queen Creek</h2>
-                <p>Professional residential installations built to withstand heavy traffic and extreme desert heat.</p>
+                <p>Professional residential installations built to withstand heavy traffic and intense desert heat.</p>
             </div>
 
             <div class="services-grid">
