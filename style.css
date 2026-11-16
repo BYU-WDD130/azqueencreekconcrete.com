@@ -333,6 +333,99 @@ body {
     animation: zoom 0.3s;
 }
 
+.faq-section {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+}
+
+.faq-item h3 {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.faq-item p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.testimonials-section {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonials-section .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials-section .section-header h2 {
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.testimonials-section .section-header p {
+    color: #666;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: #fdfdfd;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.testimonial-card .stars {
+    color: #ffc107;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.testimonial-card p {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #222;
+    font-size: 0.9rem;
+}
+
+
+
 @keyframes zoom {
     from { transform: scale(0.9); } 
     to { transform: scale(1); }
