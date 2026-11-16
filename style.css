@@ -102,6 +102,11 @@ body {
     margin-right: 8px;
 }
 
+.hero-features i, .stars i {
+    display: inline-block;
+    width: 1.25em;
+}
+
 /* Form Card */
 .hero-form-card {
     background: #ffffff;
@@ -139,8 +144,8 @@ body {
 
 .submit-btn {
     width: 100%;
-    background: #2563eb;
-    color: #fff;
+    background: #d84315;
+    color: #ffffff;
     border: none;
     padding: 12px;
     border-radius: 6px;
